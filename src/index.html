@@ -25,17 +25,26 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+    <nav class="top-bar row" ng-controller="NavbarCtrl">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="https://github.com/Swiip/generator-gulp-angular">Moviever</a></h1>
+        </li>
+      </ul>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <ul class="left">
+          <li><a ng-href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <div ng-view></div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('moviever')
-  .controller('MainCtrl', function ($scope) {
+  .controller('YeomanCtrl', function ($scope) {
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',

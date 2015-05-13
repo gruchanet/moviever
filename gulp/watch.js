@@ -13,8 +13,8 @@ module.exports = function(options) {
     gulp.watch([options.src + '/*.html', 'bower.json'], ['inject']);
 
     gulp.watch([
-      options.src + '/app/**/*.css',
-      options.src + '/app/**/*.scss'
+      options.src + '/styles/**/*.css',
+      options.src + '/styles/**/*.scss'
     ], function(event) {
       if(isOnlyChange(event)) {
         gulp.start('styles');
@@ -31,7 +31,10 @@ module.exports = function(options) {
       }
     });
 
-    gulp.watch(options.src + '/app/**/*.html', function(event) {
+    gulp.watch([
+      options.src + '/app/**/*.html',
+      options.src + '/partials/**/*.html'
+    ], function(event) {
       browserSync.reload(event.path);
     });
   });

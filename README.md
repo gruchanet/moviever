@@ -9,5 +9,5 @@
 #### Libs/Frameworks
 1. AngularJS
 
-
+<br /><br />
 ~<b>Scaffolded using [YeoMan](http://yeoman.io/)</b>
