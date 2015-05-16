@@ -40,16 +40,16 @@ angular.module('moviever')
         'logo': 'protractor.png'
       },
       {
-        'title': 'Foundation',
-        'url': 'http://foundation.zurb.com/',
-        'description': 'The most advanced responsive front-end framework in the world.',
-        'logo': 'foundation.png'
+        'title': 'Bootstrap',
+        'url': 'http://getbootstrap.com/',
+        'description': 'Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.',
+        'logo': 'bootstrap.png'
       },
       {
-        'title': 'Angular Foundation',
-        'url': 'http://pineconellc.github.io/angular-foundation/',
-        'description': 'A set of native AngularJS directives based on Foundation\'s markup and CSS',
-        'logo': 'angular-foundation.png'
+        'title': 'Angular UI Bootstrap',
+        'url': 'http://angular-ui.github.io/bootstrap/',
+        'description': 'Bootstrap components written in pure AngularJS by the AngularUI Team.',
+        'logo': 'ui-bootstrap.png'
       },
       {
         'title': 'Sass (Node)',

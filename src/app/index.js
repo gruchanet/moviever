@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('moviever', ['ngAnimate', 'ngCookies', 'ngSanitize', 'restangular', 'ngRoute', 'mm.foundation'])
+angular.module('moviever', ['ngAnimate', 'ngCookies', 'ngSanitize', 'restangular', 'ngRoute', 'ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/yeoman', {

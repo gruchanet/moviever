@@ -8,6 +8,7 @@
 
 #### Libs/Frameworks
 1. AngularJS
+2. Bootstrap v3
 
 <br /><br />
 ~<b>Scaffolded using [YeoMan](http://yeoman.io/)</b>
