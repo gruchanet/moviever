@@ -2,7 +2,7 @@
 
 angular.module('moviever.api')
   .service('TV', function ($resource, config) {
-    var api = config.tmdbApi;
+    var api = angular.copy(config.tmdbApi);
     api.url += '/tv';
 
     return {
