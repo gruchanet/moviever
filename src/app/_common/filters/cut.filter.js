@@ -18,6 +18,6 @@ angular.module('moviever')
       }
     }
 
-    return value + (tail || ' …');
+    return value + (tail || '…');
   };
 });

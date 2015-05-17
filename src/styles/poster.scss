@@ -3,6 +3,16 @@
 }
 
 .panel {
+  border: 2px solid transparent;
+  -webkit-transition: border-color ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s;
+  transition: border-color ease-in-out .15s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border-color: lightskyblue;
+  }
 
   .btn i {
     color: #666666;
@@ -15,9 +25,18 @@
     color: #262626;
     border-color: #ffffff;
 
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
     a {
       font-weight: 400;
       font-size: 11px;
+    }
+
+    .title-year {
+      font-size: 12px;
+      color: gray;
     }
   }
 
@@ -28,6 +47,7 @@
   .panel-body {
     .lead {
       font-size: 14px;
+      min-height: 45px;
     }
 
     p {

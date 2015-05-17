@@ -1,26 +1,29 @@
-<div class="col-sm-3">
+<div class="col-sm-3" ng-controller="PosterCtrl">
   <div class="panel panel-default">
-    <div class="panel-heading text-center" data-type="info" data-placement="top" bs-tooltip="poster.original_name">
-      {{poster.original_name | cut:true:25}}
+    <div class="panel-heading text-center" data-type="info" data-placement="top" bs-tooltip="poster.title || poster.name">
+      {{poster.title || poster.name | cut:true:25}}
+      <div ng-show="poster.release_date || poster.first_air_date" class="title-year">({{poster.release_date || poster.first_air_date | date:'y'}})</div>
     </div>
     <div class="panel-thumbnail">
       <poster-image path="{{poster.poster_path}}" size="large"></poster-image>
     </div>
     <div class="panel-body">
-      <p class="lead" data-type="info" data-placement="left" bs-tooltip="'Genres'">
-        <span class="label label-default" ng-repeat="genre in poster.genres">Horror</span> <!-- TODO: get by ID? | TODO: genres <-> label colors -->
+      <p ng-show="genres.length" class="lead" data-type="info" data-placement="left" bs-tooltip="'Genres'">
+        <span ng-repeat="genre in genres | limitTo:4">
+          <span class="label" ng-class="'label-' + getGenreColor($index)">{{genre.name}}</span>
+        </span>
       </p>
 
       <p data-type="info" data-placement="left" bs-tooltip="'Released'">
-        <span class="glyphicon glyphicon-calendar"></span> <b>{{poster.first_air_date || 'n/d'}}</b> <!-- TODO: check type: first_air_date|release_date -->
+        <span class="glyphicon glyphicon-calendar"></span> <b>{{poster.release_date || poster.first_air_date || 'n/d'}}</b>
       </p>
 
       <p>
         <span class="pull-left" data-type="info" data-placement="left" bs-tooltip="'Score'">
           <span class="glyphicon glyphicon-heart heart-icon"></span> <b>{{poster.vote_average}}</b> ({{poster.vote_count}})
         </span>
-        <span class="pull-right" data-type="info" data-placement="top" bs-tooltip="'Status'">
-          <b><i>{{poster.status}}</i></b> <!-- TODO: get by ID?-->
+        <span ng-show="poster.origin_country[0]" class="pull-right" data-type="info" data-placement="top" bs-tooltip="'Origin country'">
+          <span class="glyphicon glyphicon-globe"></span><b><i> {{poster.origin_country[0]}}</i></b>
         </span>
       </p>
     </div>

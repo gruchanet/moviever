@@ -18,6 +18,14 @@ angular.module('moviever', [
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       })
+      .when('/:type/search/:page?', {
+        templateUrl: 'partials/list.html',
+        controller: 'SearchCtrl'
+      })
+      .when('/:type/:which/:page?', {
+        templateUrl: 'partials/list.html',
+        controller: 'PresetSearchCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
