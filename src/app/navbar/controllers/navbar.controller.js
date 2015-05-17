@@ -2,6 +2,8 @@
 
 angular.module('moviever')
   .controller('NavbarCtrl', function ($scope) {
+    $scope.navCollapsed = true;
+
     $scope.movieDropdown = [
       {
         text: "<span class=\"glyphicon glyphicon-time\"></span> Upcoming",
@@ -30,13 +32,6 @@ angular.module('moviever')
         href: "#/"
       },
       {
-        divider: true
-      },
-      {
-        text: "<span class=\"glyphicon glyphicon-time\"></span> Latest",
-        href: "#/tv/latest"
-      },
-      {
         text: "<span class=\"fa fa-users\"></span> Popular",
         href: "#/tv/popular"
       },
@@ -50,13 +45,6 @@ angular.module('moviever')
       {
         text: "<span class=\"glyphicon glyphicon-search\"></span> Search...",
         href: "#/tv/search"
-      }
-    ];
-
-    $scope.allDropdown = [
-      {
-        text: "<span class=\"glyphicon glyphicon-search\"></span> Search...",
-        href: "#/all/search"
       }
     ];
   });
