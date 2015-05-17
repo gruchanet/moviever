@@ -4,7 +4,7 @@ angular.module('moviever')
   .controller('NavbarCtrl', function ($scope) {
     $scope.movieDropdown = [
       {
-        text: "<span class=\"glyphicon glyphicon-time\"></span> Latest",
+        text: "<span class=\"glyphicon glyphicon-time\"></span> Upcoming",
         href: "#/movie/latest"
       },
       {
