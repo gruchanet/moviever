@@ -1,8 +1,8 @@
 <!doctype html>
-<html ng-app="moviever">
+<html ng-app="moviever" ng-controller="MainCtrl">
   <head>
     <meta charset="utf-8">
-    <title>moviever</title>
+    <title>{{title}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -29,6 +29,10 @@
       <div ng-include="'partials/navbar.html'"></div>
 
       <div ng-view></div>
+
+      <div class="footer">
+        <p>by <b><a href="https://github.com/gruchanet">gruchanet</a></b></p>
+      </div>
     </div>
 
     <!-- build:js(src) scripts/vendor.js -->

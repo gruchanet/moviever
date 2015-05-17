@@ -1,20 +1,22 @@
 <nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Gulp Angular
+      <a class="navbar-brand" ng-href="#/">
+        <span class="glyphicon glyphicon-facetime-video"></span> Moviever
       </a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li>Current date: {{ date | date:'yyyy-MM-dd' }}</li>
+        <li><a class="nav-btn" data-animation="am-flip-x" bs-dropdown="movieDropdown"
+               aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-film"></span> Movie</a>
+        </li>
+        <li><a class="nav-btn" data-animation="am-flip-x" bs-dropdown="tvDropdown"
+               aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-off"></span> TV</a>
+        </li>
+        <li><a class="nav-btn" data-animation="am-flip-x" bs-dropdown="allDropdown"
+               aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-facetime-video"></span> All</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -17,7 +17,7 @@ var options = {
   },
   wiredep: {
     directory: 'bower_components',
-    exclude: [/jquery/, /foundation\.js/, /foundation\.css/]
+    exclude: [/jquery/, /bootstrap-sass-official\/.*\.js/, /bootstrap\.css/]
   }
 };
 
@@ -28,5 +28,5 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
 });
 
 gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+  gulp.start('build');
 });

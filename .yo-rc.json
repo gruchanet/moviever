@@ -21,8 +21,8 @@
         "key": "none"
       },
       "resource": {
-        "key": "restangular",
-        "module": "restangular"
+        "key": "angular-resource",
+        "module": "ngResource"
       },
       "router": {
         "key": "angular-route",
@@ -33,8 +33,8 @@
         "module": null
       },
       "bootstrapComponents": {
-        "key": "ui-bootstrap",
-        "module": "ui.bootstrap"
+        "key": "angular-strap",
+        "module": "mgcrea.ngStrap"
       },
       "cssPreprocessor": {
         "key": "node-sass",
