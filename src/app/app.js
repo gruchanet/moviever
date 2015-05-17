@@ -9,7 +9,8 @@ angular.module('moviever', [
   'ngResource',
   'ngRoute',
   'mgcrea.ngStrap',
-  'moviever.api'
+  'moviever.api',
+  'moviever.movie'
 ])
   .config(function ($routeProvider, $dropdownProvider) {
     $routeProvider
