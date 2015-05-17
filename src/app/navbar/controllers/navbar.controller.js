@@ -7,7 +7,7 @@ angular.module('moviever')
     $scope.movieDropdown = [
       {
         text: "<span class=\"glyphicon glyphicon-time\"></span> Upcoming",
-        href: "#/movie/latest"
+        href: "#/movie/upcoming"
       },
       {
         text: "<span class=\"fa fa-users\"></span> Popular",
@@ -15,7 +15,7 @@ angular.module('moviever')
       },
       {
         text: "<span class=\"glyphicon glyphicon-star\"></span> Top rated",
-        href: "#/movie/top"
+        href: "#/movie/top_rated"
       },
       {
         divider: true
@@ -29,7 +29,7 @@ angular.module('moviever')
     $scope.tvDropdown = [
       {
         text: "<span class=\"glyphicon glyphicon-cloud\"></span> On the air",
-        href: "#/"
+        href: "#/tv/on_the_air"
       },
       {
         text: "<span class=\"fa fa-users\"></span> Popular",
@@ -37,7 +37,7 @@ angular.module('moviever')
       },
       {
         text: "<span class=\"glyphicon glyphicon-star\"></span> Top rated",
-        href: "#/tv/top"
+        href: "#/tv/top_rated"
       },
       {
         divider: true
