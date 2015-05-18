@@ -6,6 +6,7 @@ angular.module('moviever')
       url: 'http://api.themoviedb.org/3',
       key: 'secret_api_key',
       pagination: {
+        per_page: 20,
         max_page: 1000
       }
     }
