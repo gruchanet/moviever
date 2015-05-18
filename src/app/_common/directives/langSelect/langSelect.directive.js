@@ -16,9 +16,14 @@ angular.module('moviever')
 
     return {
       restrict: 'E',
+      replace: true,
       templateUrl: 'app/_common/directives/langSelect/langSelect.template.html',
-      link: function (scope) {
-        scope.icons = languages;
+      link: function (scope, elem, attrs) {
+        scope.langs = languages;
+
+        for (var i = 0; i < attrs.length; i++) {
+          elem.attr(attrs[i]);
+        }
       }
     }
   });

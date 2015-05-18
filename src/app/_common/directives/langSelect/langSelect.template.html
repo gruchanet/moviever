@@ -1,4 +1,5 @@
-<button type="button" class="btn btn-default" ng-model="selectedLanguage" data-html="1"
-        bs-options="icon.value as icon.label for icon in icons" bs-select>
-  Choose language... (EN default) <span class="caret"></span>
+<button type="button" class="btn btn-default" data-html="true"
+        data-animation="am-flip-x" data-placeholder="Choose language..."
+        bs-options="lang.value as lang.label for lang in langs" bs-select>
+  Choose language... <span class="caret"></span>
 </button>

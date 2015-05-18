@@ -1,0 +1,46 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" ng-show="title">
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="modal-title" ng-bind-html="title"></h4>
+      </div>
+      <div class="modal-body">
+        <form ng-controller="SearchFormCtrl" name="searchForm" ng-submit="searchForm.$valid && submit(form)" class="form-horizontal" novalidate>
+          <div class="form-group" ng-class="{ 'has-error': searchForm.query.$invalid && searchForm.query.$dirty }">
+            <label for="query" class="col-sm-5 control-label">Search query: </label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="query" name="query"
+                     ng-model="form.searchQuery" placeholder="Search by name/description..." required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lang" class="col-sm-5 control-label">Language select (optional):</label>
+            <div class="col-sm-7">
+              <lang-select id="lang" ng-model="form.selectedLanguage"></lang-select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lang" class="col-sm-5 control-label">Type:</label>
+            <div class="col-sm-7">
+              <type-select id="type" ng-model="form.selectedType" ng-disabled="true"></type-select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-7">
+              <button type="submit" class="btn btn-default"
+                      ng-disabled="searchForm.$invalid" ng-click="searchForm.$valid && $hide()">
+                <span class="glyphicon glyphicon-search"></span> Search
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

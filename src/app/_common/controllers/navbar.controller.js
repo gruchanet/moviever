@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('moviever')
-  .controller('NavbarCtrl', function ($scope) {
+  .controller('NavbarCtrl', function ($scope, searchModal) {
     $scope.navCollapsed = true;
 
     $scope.movieDropdown = [
@@ -22,7 +22,7 @@ angular.module('moviever')
       },
       {
         text: "<span class=\"glyphicon glyphicon-search\"></span> Search...",
-        href: "#/movie/search"
+        click: "showSearchModal('movie')"
       }
     ];
 
@@ -44,7 +44,11 @@ angular.module('moviever')
       },
       {
         text: "<span class=\"glyphicon glyphicon-search\"></span> Search...",
-        href: "#/tv/search"
+        click: "showSearchModal('tv')"
       }
     ];
+
+    $scope.showSearchModal = function(type) {
+      searchModal.show($scope.$new(true), type); // scope must be instantiated in controller
+    };
   });
