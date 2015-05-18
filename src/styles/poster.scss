@@ -3,6 +3,8 @@
 }
 
 .panel {
+  min-height: 530px;
+
   border: 2px solid transparent;
   -webkit-transition: border-color ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s;
