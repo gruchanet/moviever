@@ -4,6 +4,9 @@ angular.module('moviever')
     appVersion: 0.1,
     tmdbApi: {
       url: 'http://api.themoviedb.org/3',
-      key: 'secret_api_key'
+      key: 'secret_api_key',
+      pagination: {
+        max_page: 1000
+      }
     }
   });
