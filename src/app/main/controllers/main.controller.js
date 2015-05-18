@@ -2,5 +2,5 @@
 
 angular.module('moviever')
   .controller('MainCtrl', function ($scope, config) {
-    $scope.title = config.appName + " ~" + config.appVersion + "~";
+    $scope.title = config.appName + " v" + config.appVersion + "";
   });
