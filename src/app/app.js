@@ -16,8 +16,7 @@ angular.module('moviever', [
   .config(function ($routeProvider, $dropdownProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/home.html',
-        controller: 'HomeCtrl'
+        templateUrl: 'partials/home.html'
       })
       .when('/:type/:which/:page?', {
         templateUrl: 'partials/list.html',
