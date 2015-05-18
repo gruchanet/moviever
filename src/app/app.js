@@ -9,6 +9,7 @@ angular.module('moviever', [
   'ngResource',
   'ngRoute',
   'mgcrea.ngStrap',
+  'brantwills.paging',
   'moviever.api',
   'moviever.movie'
 ])
@@ -18,13 +19,9 @@ angular.module('moviever', [
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       })
-      .when('/:type/search/:page?', {
-        templateUrl: 'partials/list.html',
-        controller: 'SearchCtrl'
-      })
       .when('/:type/:which/:page?', {
         templateUrl: 'partials/list.html',
-        controller: 'PresetSearchCtrl'
+        controller: 'SearchCtrl'
       })
       .otherwise({
         redirectTo: '/'

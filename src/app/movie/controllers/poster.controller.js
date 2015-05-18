@@ -3,7 +3,7 @@
 angular.module('moviever.movie')
   .controller('PosterCtrl', function ($scope) {
     var colors = [
-      'default', 'primary', 'success', 'info', 'warning', 'danger'
+      'primary', 'success', 'info', 'warning', 'danger'
     ];
 
     $scope.getGenreColor = function (idx) {

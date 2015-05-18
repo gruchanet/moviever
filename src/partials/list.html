@@ -4,4 +4,10 @@
   <div class="row">
     <poster ng-repeat="poster in posters"></poster>
   </div>
+
+  <div class="centered">
+    <paging page="pagination.page" page-size="20" total="pagination.total_items"
+             show-prev-next="true" paging-action="goToPage(page)">
+    </paging>
+  </div>
 </div>
