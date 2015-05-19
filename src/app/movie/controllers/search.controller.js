@@ -7,7 +7,9 @@ angular.module('moviever.movie')
 
     api[$routeParams.which].get(params)
       .$promise.then(function (response) {
-        $scope.type = $routeParams.type;
+        $scope.modelType = $routeParams.type;
+        $scope.discoverType = $routeParams.which;
+
         $scope.posters = response.results;
         $scope.pagination = {
           page: response.page,
