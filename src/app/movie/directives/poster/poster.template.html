@@ -1,4 +1,4 @@
-<div class="col-sm-3" ng-controller="PosterCtrl">
+<div class="col-sm-3" ng-controller="PosterCtrl" ng-click="followPosterLink(poster.id)">
   <div class="panel panel-default">
     <div class="panel-heading text-center" data-type="info" data-placement="top" bs-tooltip="poster.title || poster.name">
       {{poster.title || poster.name | cut:true:25}}

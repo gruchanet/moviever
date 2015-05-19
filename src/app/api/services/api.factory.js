@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('moviever.api')
-  .factory('API', function (Movies, TV, Search) {
+  .factory('API', function (Movies, TV) {
 
     return function (type) {
       switch (type) {
@@ -9,8 +9,6 @@ angular.module('moviever.api')
           return Movies;
         case 'tv':
           return TV;
-        case 'search':
-          return Search;
         default:
           throw 'Incorrect API type!';
       }
