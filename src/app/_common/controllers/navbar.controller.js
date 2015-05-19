@@ -16,13 +16,6 @@ angular.module('moviever')
       {
         text: "<span class=\"glyphicon glyphicon-star\"></span> Top rated",
         href: "#/movie/top_rated"
-      },
-      {
-        divider: true
-      },
-      {
-        text: "<span class=\"glyphicon glyphicon-search\"></span> Search...",
-        click: "showSearchModal('movie')"
       }
     ];
 
@@ -38,17 +31,10 @@ angular.module('moviever')
       {
         text: "<span class=\"glyphicon glyphicon-star\"></span> Top rated",
         href: "#/tv/top_rated"
-      },
-      {
-        divider: true
-      },
-      {
-        text: "<span class=\"glyphicon glyphicon-search\"></span> Search...",
-        click: "showSearchModal('tv')"
       }
     ];
 
-    $scope.showSearchModal = function(type) {
-      searchModal.show($scope.$new(true), type); // scope must be instantiated in controller
+    $scope.showSearchModal = function() {
+      searchModal.show();
     };
   });

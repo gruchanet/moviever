@@ -15,8 +15,6 @@ angular.module('moviever.movie')
           page: response.page,
           total_items: calculateTotalItems(response.total_results)
         };
-
-        console.log(response);
       });
 
     function prepareParams(routeParams) {

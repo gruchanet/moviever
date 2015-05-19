@@ -4,7 +4,7 @@ angular.module('moviever.movie')
   .directive('typeSelect', function () {
     var types = [
       { value: 'movie', label: '<span class="glyphicon glyphicon-film"></span> Movie' },
-      { value: 'tv', label: '<span class="glyphicon glyphicon-off"></span> TV' }
+      { value: 'tv', label: '<span class="glyphicon glyphicon-off"></span> TV Series' }
     ];
 
     return {
