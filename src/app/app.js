@@ -23,7 +23,19 @@ angular.module('moviever', [
       .state('one', {
         url: '/:type/{id:int}',
         templateUrl: 'partials/full_info.html',
-        controller: 'FullInfoCtrl'
+        controller: 'FullInfoCtrl',
+        resolve: { // https://github.com/angular-ui/ui-router/wiki#resolve
+          fullInfo: function($q, $stateParams, API) {
+            var deferred = $q.defer();
+
+            API($stateParams.type).one.get({id: $stateParams.id})
+              .$promise.then(function (response) {
+                deferred.resolve(response);
+              });
+
+            return deferred.promise;
+          }
+        }
       })
       .state('list', {
         url: '/:type/:which/:page?{query:string}',

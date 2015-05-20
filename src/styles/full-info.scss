@@ -1,0 +1,23 @@
+.fullinfo-container {
+  .fullinfo-fixed-bar {
+    position: fixed;
+
+    .fullinfo-title {
+      position: absolute;
+      margin-top: 0;
+    }
+
+    .fixed-component { // tooltip fix
+      position: fixed;
+    }
+  }
+
+  .backdrop-image {
+    margin: auto;
+    width: 100%;
+  }
+
+  .fullinfo-overview-panel {
+    margin-top: 5px;
+  }
+}

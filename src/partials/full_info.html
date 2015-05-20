@@ -1,7 +1,36 @@
-<div>
-  <!-- TODO: template -->
+<div class="fullinfo-container">
+  <div class="fullinfo-fixed-bar">
+    <h3 class="fullinfo-title">
+    <span class="label label-primary fixed-component">
+      {{fullInfo.title || fullInfo.name}}
+      <a ng-show="fullInfo.homepage" class="btn btn-primary btn-xs" href="{{fullInfo.homepage}}" target="_blank" role="button"
+         data-type="info" data-placement="right" bs-tooltip="'Homepage'">
+        <i class="glyphicon glyphicon-globe"></i>
+      </a>
+    </span>
+    </h3>
+  </div>
+
+  <api-image type="backdrop" path="{{fullInfo.backdrop_path}}" size="large" class="img-rounded backdrop-image"></api-image>
+
+  <div ng-show="fullInfo.overview" class="panel panel-info fullinfo-overview-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title"><b>Short overview</b></h3>
+    </div>
+    <div class="panel-body">
+      {{fullInfo.overview}}
+    </div>
+  </div>
+
+  <!--<div class="jumbotron">-->
+    <!--<a class="btn btn-primary btn-lg" ng-href="fullInfo.homepage" role="button">-->
+      <!--<span class="glyphicon glyphicon-link"></span> Homepage-->
+      <!--&lt;!&ndash; TODO: &ndash;&gt;-->
+    <!--</a>-->
+  <!--</div>-->
+
+  <dir-disqus disqus-shortname="moviever"
+              disqus-identifier="{{ disqus.id }}"
+              disqus-url="{{ disqus.url }}">
+  </dir-disqus>
 </div>
-<dir-disqus disqus-shortname="moviever"
-            disqus-identifier="{{ disqus.id }}"
-            disqus-url="{{ disqus.url }}">
-</dir-disqus>

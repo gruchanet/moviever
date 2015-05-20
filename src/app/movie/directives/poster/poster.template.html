@@ -1,5 +1,5 @@
 <div class="col-sm-3" ng-controller="PosterCtrl" ng-click="followPosterLink(poster.id)">
-  <div class="panel panel-default">
+  <div class="poster panel panel-default">
     <div class="panel-heading text-center" data-type="info" data-placement="top" bs-tooltip="poster.title || poster.name">
       {{poster.title || poster.name | cut:true:25}}
       <div ng-show="poster.release_date || poster.first_air_date" class="title-year">
@@ -8,7 +8,7 @@
       <div ng-show="!poster.release_date && !poster.first_air_date">&nbsp;</div>
     </div>
     <div class="panel-thumbnail">
-      <api-image path="{{poster.poster_path}}" size="large" class="poster-image"></api-image>
+      <api-image type="poster" path="{{poster.poster_path}}" size="large" class="poster-image"></api-image>
     </div>
     <div class="panel-body">
       <p class="lead" data-type="info" data-placement="left" bs-tooltip="'Genres'">

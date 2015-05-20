@@ -8,7 +8,6 @@ angular.module('moviever.movie')
     api[$stateParams.which].get(params)
       .$promise.then(function (response) {
         $scope.modelType = $stateParams.type;
-        $scope.discoverType = $stateParams.which;
 
         $scope.posters = response.results;
         $scope.pagination = {

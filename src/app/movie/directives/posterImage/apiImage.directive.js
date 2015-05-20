@@ -3,14 +3,15 @@
 angular.module('moviever.movie')
   .directive('apiImage', function (config) {
     var imageBaseUrl = config.tmdbApi.images.url;
-    var posterSizes = config.tmdbApi.images.posterSizes;
 
     return {
       restrict: 'E',
       replace: true,
       template: '<img class="img-responsive">',
       link: function (scope, elem, attrs) {
-        var widthPath = posterSizes[attrs.size];
+        var imgSizes = config.tmdbApi.images[attrs.type + 'Sizes'];
+
+        var widthPath = imgSizes[attrs.size];
         var width = widthPath.slice(1);
 
         if (attrs.path) {
