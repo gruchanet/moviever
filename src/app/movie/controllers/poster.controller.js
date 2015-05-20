@@ -11,6 +11,6 @@ angular.module('moviever.movie')
     };
 
     $scope.followPosterLink = function (id) {
-      $location.path('/' + $stateParams.type + '/' + id);
+      $location.path('/' + $stateParams.type + '/' + id).search({});
     };
   });
