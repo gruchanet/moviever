@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('moviever.movie')
-  .controller('SearchCtrl', function ($scope, $routeParams, $location, API, config) {
-    var api = API($routeParams.type);
-    var params = prepareParams($routeParams);
+  .controller('SearchCtrl', function ($scope, $stateParams, $location, API, config) {
+    var api = API($stateParams.type);
+    var params = prepareParams($stateParams);
 
-    api[$routeParams.which].get(params)
+    api[$stateParams.which].get(params)
       .$promise.then(function (response) {
-        $scope.modelType = $routeParams.type;
-        $scope.discoverType = $routeParams.which;
+        $scope.modelType = $stateParams.type;
+        $scope.discoverType = $stateParams.which;
 
         $scope.posters = response.results;
         $scope.pagination = {
@@ -17,9 +17,9 @@ angular.module('moviever.movie')
         };
       });
 
-    function prepareParams(routeParams) {
-      var params = angular.copy(routeParams);
-      params.page = routeParams.page || 1;
+    function prepareParams(stateParams) {
+      var params = angular.copy(stateParams);
+      params.page = stateParams.page || 1;
       delete params.type;
       delete params.which;
 
@@ -35,6 +35,6 @@ angular.module('moviever.movie')
     }
 
     $scope.goToPage = function (page) {
-      $location.path('/' + $routeParams.type + '/' + $routeParams.which + '/' + page);
+      $location.path('/' + $stateParams.type + '/' + $stateParams.which + '/' + page);
     };
   });

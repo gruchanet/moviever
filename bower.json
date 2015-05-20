@@ -6,14 +6,15 @@
     "angular-cookies": "~1.3.4",
     "angular-sanitize": "~1.3.4",
     "angular-resource": "~1.3.4",
-    "angular-route": "~1.3.4",
+    "angular-ui-router": "~0.2.13",
     "bootstrap-sass-official": "~3.3.1",
     "angular-strap": "~2.2.2",
     "angular": "~1.3.4",
     "angular-motion": "~0.3.4",
     "components-font-awesome": "~4.3.0",
     "angular-paging": "~1.0.2",
-    "flag-icon-css": "lipis/flag-icon-css#~0.7.1"
+    "flag-icon-css": "lipis/flag-icon-css#~0.7.1",
+    "angularUtils": "michaelbromley/angularUtils"
   },
   "devDependencies": {
     "angular-mocks": "~1.3.4"

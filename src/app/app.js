@@ -7,24 +7,25 @@ angular.module('moviever', [
   'ngCookies',
   'ngSanitize',
   'ngResource',
-  'ngRoute',
+  'ui.router',
   'mgcrea.ngStrap',
   'brantwills.paging',
   'moviever.api',
   'moviever.movie'
 ])
-  .config(function ($routeProvider, $dropdownProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider, $dropdownProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/',
         templateUrl: 'partials/home.html'
       })
-      .when('/:type/:which/:page?', {
+      .state('list', {
+        url: '/:type/:which/:page?{query:string}',
         templateUrl: 'partials/list.html',
         controller: 'SearchCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
+    $urlRouterProvider.otherwise('/');
+
 
     angular.extend($dropdownProvider.defaults, {
       html: true

@@ -29,6 +29,6 @@ angular.module('moviever.movie')
       }
 
       // go to search url to invoke SearchCtrl
-      $location.path('/' + data.type + '/search').search(params);
+      $location.path('/' + data.type + '/search/').search(params);
     };
   });

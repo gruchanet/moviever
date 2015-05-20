@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('moviever.movie')
-  .controller('PosterCtrl', function ($scope, $routeParams, $location) {
+  .controller('PosterCtrl', function ($scope, $stateParams, $location) {
     var colors = [
       'primary', 'success', 'info', 'warning', 'danger'
     ];
@@ -11,6 +11,6 @@ angular.module('moviever.movie')
     };
 
     $scope.followPosterLink = function (id) {
-      $location.path('/' + $routeParams.type + '/' + id);
+      $location.path('/' + $stateParams.type + '/' + id);
     };
   });
