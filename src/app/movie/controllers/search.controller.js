@@ -27,8 +27,8 @@ angular.module('moviever.movie')
     }
 
     function calculateTotalItems(totalItems) {
-      var itemsPerPage = config.tmdbApi.pagination.per_page;
-      var maxPage = config.tmdbApi.pagination.max_page;
+      var itemsPerPage = config.tmdbApi.pagination.perPage;
+      var maxPage = config.tmdbApi.pagination.maxPage;
       var maxItems = itemsPerPage * maxPage;
 
       return (totalItems > maxItems) ? maxItems : totalItems;
